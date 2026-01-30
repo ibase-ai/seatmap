@@ -454,7 +454,9 @@
       const t = document.createElementNS("http://www.w3.org/2000/svg","text");
       t.setAttribute("x", s.x);
       t.setAttribute("y", s.y);
-      t.textContent = s.no;
+	  
+      const mainSeats = ["1","2","3","4","5"];
+      t.textContent = mainSeats.includes(s.no) ? `主${s.no}` : s.no;
 
       g.appendChild(c);
       g.appendChild(t);
